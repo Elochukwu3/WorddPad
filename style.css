@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+#page-container{
+    margin: auto;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+}
+.button-container{
+    display: flex;
+    position: relative; 
+    border-bottom: 1px solid gray; 
+  
+}
+.listUl{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+
+}
+.btnInner{
+    padding: 0 .1rem;
+}
+.btnInner button{
+    padding: .5em 1.1em;
+    /* background-color: rgb(211, 70, 70); */
+    border-radius: 4px;
+    border: unset;
+    font-size: .8em;
+    font-weight: 400;
+}
+.file-summary{
+    background: blue;
+    padding: .5em 2em;
+    font-weight: 400;
+    font-size: .8em;
+    color: white; 
+}
+.sect2-container{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    background: rgb(231, 239, 242);
+    padding: 0 1em;
+   height: max-content;
+}
+#fontValue::-webkit-scrollbar{
+    display: none;
+}
+#fontValue{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    width: fit-content;
+}
+.characterSectHolder{
+    padding: .5em .2em;
+    /* border-right: 1px solid gray; */
+}
+.selectTag{
+    display: flex;
+}
+select{
+    border: 1px solid blue;
+    padding: .3em 1em;
+}
+.ATag{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;  
+    padding: 0 1em;
+   
+}
+section{
+    width: 100%;
+}
+.selectSect, .characters{
+    display: flex;
+    align-items: center;
+    /* width: 100%; */
+    justify-content: space-around;
+    /* padding: 0 1em; */
+    /* flex-wrap: wrap; */
+    /* background-color: red; */
+}
+.pasteCont{
+    width: 10%;
+    display: flex;
+    justify-content: space-around;
+    border-right: 1px solid grey;
+}
+.alignContainer{
+    padding: .5em .2em;
+    border-right: 1px solid gray;
+    
+}
+.alignItems{
+    display: flex;
+    justify-content: center;
+    padding: 0 1em;
+}
+.textAreaCont{
+    display: flex;
+    justify-content: center;
+    background: rgb(155, 191, 226);
+    height: 100vh;
+    width: 100vw;
+}
+textarea{
+    height: 90%;
+    width: 80%;
+    margin: 3em 0;
+   size-adjust: none;
+   
+}
