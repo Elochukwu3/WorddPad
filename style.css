@@ -99,8 +99,18 @@ section{
 }
 .alignItems{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     padding: 0 1em;
+}
+.alignItems p{
+padding: 0 .5em;
+}
+.foot{
+    text-align: center;
+    display: flex;
+    align-items: flex-end;
+    height: 80%;
+    justify-content: center;
 }
 .textAreaCont{
     display: flex;
@@ -114,5 +124,9 @@ textarea{
     width: 80%;
     margin: 3em 0;
    size-adjust: none;
-   
+   padding: 1em;
+   font-size: 1.1em;
+}
+#pointer{
+    cursor: pointer;
 }
