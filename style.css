@@ -101,6 +101,8 @@ section{
     display: flex;
     justify-content: space-around;
     padding: 0 1em;
+   
+    /* text-transform: s; */
 }
 .alignItems p{
 padding: 0 .5em;
@@ -119,7 +121,11 @@ padding: 0 .5em;
     height: 100vh;
     width: 100vw;
 }
+.hove{
+    background: red;
+}
 textarea{
+    resize: none;
     height: 90%;
     width: 80%;
     margin: 3em 0;
@@ -129,4 +135,12 @@ textarea{
 }
 #pointer{
     cursor: pointer;
+}
+#colorInput{
+    width: 20px;
+}
+input[type = "color"]{
+    width: 32px;
+    height: 32px;
+    -webkit-appearance: none;
 }
