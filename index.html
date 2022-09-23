@@ -16,26 +16,40 @@
             <div class="wordpad-inner">
                 <header>
                     <details>
-                        <summary>Elo -WordPad</summary>
+                        <summary class="folderName"><span class="folder-display">Document</span> -WordPad</summary>
                     </details>
                 </header>
                 <section>
                     <div class="button-container">
                         <div class="btnInner">
+                            <!-- <div id="fileBtn"> -->
                             <details>
                                 <summary class="file-summary">
-                                 File
+                                    File
                                 </summary>
-                               
+
+                                <div id="save-container">
                                     <ul class="listUl">
-                                        <l1>New</l1>
-                                        <l1>Open</l1>
-                                        <l1>Save</l1>
-                                        <l1>Mail</l1>
-                                        <l1>Exit</l1>
+                                        <li class="New"><a href="./index.html"><span><i
+                                                        class="far fa-file-alt"></i></span> New</a></li>
+                                        <li class="Open"><span><i class="fas fa-folder"></i></span> Open</li>
+                                        <li><span><i class="far fa-envelope"></i></span> Mail</li>
+                                        <li><span><i class="fas fa-print"></i></span> Print</li>
+                                        <li class="save"><span><i class="fas fa-save"></i></span> Save</li>
+                                        <li><span><i class="fas fa-arrow-left"></i></span> Exit</li>
+
                                     </ul>
-                                
+                                    <div id="recentDoc">
+                                        <p class="recent1">Recent Documents</p>
+                                        <ul class="appendRecent">
+                                            <!-- <p>Elo</p> -->
+                                        </ul>
+                                    </div>
+                                </div>
+
                             </details>
+                            <!-- </div> -->
+
                         </div>
                         <div class="btnInner">
                             <button>
@@ -44,7 +58,7 @@
                         </div>
                         <div class="btnInner">
                             <button>
-                                Home
+                                View
                             </button>
                         </div>
 
@@ -54,12 +68,15 @@
                 <section class="sect2-container">
                     <div class="pasteCont">
                         <div>
-                            <p  id="pointer"><i class="fas fa-clipboard " style="font-size: 2em; color: goldenrod;"  id="pointer"></i></p>
-                        <p>Paste</p>
+                            <p id="pointer"><i class="fas fa-clipboard " style="font-size: 2em; color: goldenrod;"
+                                    id="pointer"></i></p>
+                            <p>Paste</p>
                         </div>
                         <div>
-                         <p  id="pointer"> <span><i class="fas fa-cut" style="color: rgb(189, 224, 237);" ></i></span> cut</p>
-                        <p  id="pointer"><span><i class="far fa-copy" style="color: rgb(189, 224, 237);"></i></span> copy</p>
+                            <p id="pointer"> <span><i class="fas fa-cut" style="color: rgb(189, 224, 237);"></i></span>
+                                cut</p>
+                            <p id="pointer"><span><i class="far fa-copy" style="color: rgb(189, 224, 237);"></i></span>
+                                copy</p>
                         </div>
                     </div>
                     <div style="border-right: 1px solid grey;">
@@ -68,86 +85,96 @@
                                 <div class="selectTag">
                                     <select name="" id="fontStyles">
                                         <option value="font" disabled selected>Font style</option>
-                                        <option value="calibri">calibri</option>
+                                        <option value="calibri">Calibri</option>
                                         <option value="Bell MT">Bell MT</option>
-                                        <option value="sanserif">sanserif</option>
+                                        <option value="sanserif">Sanserif</option>
                                         <option value="cursive">cursive</option>
-                                        <option value="fantasy">fantasy</option>
+                                        <option value="Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Cambri
+                                        </option>
+                                        <option value="fantasy">Fantasy</option>
+                                        <option value="Times New Roman', Times, serif">TM Roman</option>
                                         <option value="monospace">monospace</option>
+                                        <option value="Arial, Helvetica, sans-serif">Arial</option>
+                                        <option value="Verdana, Geneva, Tahoma, sans-serif">Verdana,GT</option>
+                                        <option value="Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+                                            Frank,GMA</option>
                                     </select>
                                     <select name="" id="fontValue">
                                         <!-- <option value="fontSize" disabled selected>size</option> -->
                                         <option value="8">8</option>
                                         <option value="9">9</option>
-                                       <option value="10">10</option>
-                                       <option value="12">12</option>
-                                       <option value="14">14</option>
-                                       <option value="13">13</option>
-                                       <option value="16">16</option>
-                                       <option value="18">18</option>
-                                       <option value="20">20</option>
-                                       <option value="22">22</option>
-                                       <option value="24">24</option>
-                                       <option value="26">26</option>
-                                       <option value="30">30</option>
-                                       <option value="32">32</option>
-                                       <option value="34">34</option>
-                                       <option value="36">36</option>
-                                       <option value="40">40</option>
-                                       <option value="54">54</option>
+                                        <option value="10">10</option>
+                                        <option value="12">12</option>
+                                        <option value="14">14</option>
+                                        <option value="13">13</option>
+                                        <option value="16">16</option>
+                                        <option value="18">18</option>
+                                        <option value="20">20</option>
+                                        <option value="22">22</option>
+                                        <option value="24">24</option>
+                                        <option value="26">26</option>
+                                        <option value="30">30</option>
+                                        <option value="32">32</option>
+                                        <option value="34">34</option>
+                                        <option value="36">36</option>
+                                        <option value="40">40</option>
+                                        <option value="54">54</option>
                                     </select>
                                 </div>
                                 <div class="ATag">
-                                    <p  id="pointer">A</p>
-                                    <p  id="pointer">A</p>
+                                    <p id="pointer">A</p>
+                                    <p id="pointer">A</p>
                                 </div>
                             </div>
-                            <div class="characters"  id="pointer">
-                                <div class="bod">
+                            <div class="characters" id="pointer">
+                                <div class="bod" style="padding: .2em .2em;">
                                     <b>B</b>
                                 </div>
-                                <div class="itally"  id="pointer">
+                                <div class="itally" id="pointer">
                                     <i>I</i>
                                 </div>
-                                <div class="underine"  id="pointer">
+                                <div class="underine" id="pointer">
                                     <u>U</u>
                                 </div>
-                                <div class="strike"  id="pointer">
-                                  <strike>abc</strike>
+                                <div class="strike" id="pointer">
+                                    <strike>abc</strike>
                                 </div>
-                                <div class="sup"  id="pointer">
-                                 A<sup>a</sup>
+                                <div class="sup" id="pointer">
+                                    A<sup>a</sup>
                                 </div>
-                                <div class="sub"  id="pointer">
-                                 A<sub>a</sub>
+                                <div class="sub" id="pointer">
+                                    A<sub>a</sub>
                                 </div>
-                                <div class="colo"  id="pointer">
+                                <div class="colo" id="pointer" style="position: relative;">
                                     <b>A</b>
                                     <input type=color id="colorInput">
                                 </div>
-                                <div class="backG" id="pointer">
-                                 <b>A</b>
+                                <div class="backG" id="pointer" style="position: relative;">
+                                    <b>A</b>
+                                    <input type=color id="colorInput">
                                 </div>
                             </div>
-                            <div  class="foot">
+                            <div class="foot">
                                 Font
                             </div>
                         </div>
                     </div>
-                <!-- align atinee -->
-                <div class="alignContainer">
-                   <div class="alignItems" >
-                    <p><i class="fas fa-align-left left"  id="pointer"></i></p>
-                    <p><i class="fas fa-align-center center"  id="pointer"></i></p>
-                    <p><i class="fas fa-align-right right"  id="pointer"></i></p>
-                    <p><i class="fas fa-align-justify justify"  id="pointer"></i></p>
-                   </div>
-                   <p class="foot">Paragraph</p>
-                </div>
+                    <!-- align atinee -->
+                    <div class="alignContainer">
+                        <div class="alignItems">
+                            <p><i class="fas fa-align-left left" id="pointer"></i></p>
+                            <p><i class="fas fa-align-center center" id="pointer"></i></p>
+                            <p><i class="fas fa-align-right right" id="pointer"></i></p>
+                            <p><i class="fas fa-align-justify justify" id="pointer"></i></p>
+                        </div>
+                        <p class="foot">Paragraph</p>
+                    </div>
                 </section>
                 <section>
                     <div class="textAreaCont">
-                            <textarea name="" id="write-area" cols="70" rows="30"></textarea> 
+                        <textarea name="" id="write-area" cols="" rows="">
+
+                            </textarea>
                     </div>
                 </section>
 

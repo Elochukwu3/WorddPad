@@ -1,146 +1,199 @@
-*{
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  /* list-style-type: none; */
+  box-sizing: border-box;
 }
-#page-container{
-    margin: auto;
-    display: block;
-    width: 100vw;
-    height: 100vh;
+.folderName {
+  text-align: center;
+  padding-top: 0.5em;
 }
-.button-container{
-    display: flex;
-    position: relative; 
-    border-bottom: 1px solid gray; 
-  
+#page-container {
+  margin: auto;
+  display: block;
+  width: 100vw;
+  height: 100vh;
 }
-.listUl{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
+.button-container {
+  display: flex;
+  position: relative;
+  border-bottom: 1px solid gray;
+}
+#save-container {
+  position: absolute;
+  background-color: rgb(231, 239, 242);
+  display: flex;
+  width: 32%;
+  padding: 0.1em 0;
+  height: 40vh;
+  border: 1px solid grey;
+  z-index: 1;
+}
+#recentDoc {
+  width: 100%;
+  height: 100%;
+  border-left: 1px solid grey;
+}
+.recent1 {
+  border: 1px solid grey;
+  padding: 0 2em;
+  /* width: 100%; */
+}
+.listUl {
+  /* display: flex; */
+  /* flex-direction: column; */
+  width: 40%;
+  height: 100%;
+  background: white;
+}
+.listUl li {
+  /* padding: .5em .4em; */
+  background: white;
+  cursor: pointer;
+  height: 15%;
+}
+.listUl li span {
+  padding-right: 1em;
+}
+.btnInner {
+  padding: 0 0.06rem;
+}
+.btnInner button {
+  padding: 0.5em 1.1em;
+  /* background-color: rgb(211, 70, 70); */
+  /* border-radius: 4px; */
+  border: unset;
+  font-size: 0.8em;
+  font-weight: 400;
+}
+.file-summary {
+  background: blue;
+  padding: 0.5em 2em;
+  font-weight: 400;
+  font-size: 0.8em;
+  color: white;
+}
+.sect2-container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  background: rgb(231, 239, 242);
+  padding: 0 1em;
+  height: max-content;
+}
+#fontValue::-webkit-scrollbar {
+  display: none;
+}
+#fontValue {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  width: fit-content;
+}
+.characterSectHolder {
+  padding: 0.5em 0.2em;
+  /* border-right: 1px solid gray; */
+}
+.selectTag {
+  display: flex;
+}
+select {
+  border: 1px solid blue;
+  padding: 0.3em 1em;
+}
+.ATag {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 0 1em;
+}
+section {
+  width: 100%;
+}
+.selectSect,
+.characters {
+  display: flex;
+  align-items: center;
+  /* width: 100%; */
+  justify-content: space-around;
+  /* padding: 0 1em; */
+  /* flex-wrap: wrap; */
+  /* background-color: red; */
+}
+.pasteCont {
+  width: 10%;
+  display: flex;
+  justify-content: space-around;
+  border-right: 1px solid grey;
+}
+.alignContainer {
+  padding: 0.5em 0.2em;
+  border-right: 1px solid gray;
+}
+.alignItems {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 1em;
 
+  /* text-transform: s; */
 }
-.btnInner{
-    padding: 0 .1rem;
+.alignItems p {
+  padding: 0 0.5em;
 }
-.btnInner button{
-    padding: .5em 1.1em;
-    /* background-color: rgb(211, 70, 70); */
-    border-radius: 4px;
-    border: unset;
-    font-size: .8em;
-    font-weight: 400;
+.foot {
+  text-align: center;
+  display: flex;
+  align-items: flex-end;
+  height: 80%;
+  justify-content: center;
 }
-.file-summary{
-    background: blue;
-    padding: .5em 2em;
-    font-weight: 400;
-    font-size: .8em;
-    color: white; 
+.textAreaCont {
+  display: flex;
+  justify-content: center;
+  background: rgb(155, 191, 226);
+  height: 100vh;
+  width: 100vw;
+  padding: 1em 0;
 }
-.sect2-container{
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    background: rgb(231, 239, 242);
-    padding: 0 1em;
-   height: max-content;
+.hove {
+  background: red;
 }
-#fontValue::-webkit-scrollbar{
-    display: none;
+textarea {
+  resize: none;
+  height: 100%;
+  width: 80%;
+  /* margin: 3em 0; */
+  size-adjust: none;
+  padding: 1em;
+  font-size: 1.1em;
 }
-#fontValue{
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    width: fit-content;
+#pointer {
+  cursor: pointer;
+  padding: 0.1em 0.3em;
 }
-.characterSectHolder{
-    padding: .5em .2em;
-    /* border-right: 1px solid gray; */
+#colorInput {
+  width: 20px;
 }
-.selectTag{
-    display: flex;
+input[type="color"] {
+  width: 42px;
+  height: 8px;
+  -webkit-appearance: none;
+  position: absolute;
+  bottom: -0.4em;
+  left: -0.2em;
+  border: unset;
 }
-select{
-    border: 1px solid blue;
-    padding: .3em 1em;
+.New a {
+  text-decoration: none;
+  color: black;
 }
-.ATag{
-    display: flex;
-    justify-content: space-around;
-    width: 100%;  
-    padding: 0 1em;
-   
+.appendRecent {
+  padding: 0 1em;
+  font-size: 1.07em;
+  list-style-type: disc !important;
+  text-transform: capitalize;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
-section{
-    width: 100%;
-}
-.selectSect, .characters{
-    display: flex;
-    align-items: center;
-    /* width: 100%; */
-    justify-content: space-around;
-    /* padding: 0 1em; */
-    /* flex-wrap: wrap; */
-    /* background-color: red; */
-}
-.pasteCont{
-    width: 10%;
-    display: flex;
-    justify-content: space-around;
-    border-right: 1px solid grey;
-}
-.alignContainer{
-    padding: .5em .2em;
-    border-right: 1px solid gray;
-    
-}
-.alignItems{
-    display: flex;
-    justify-content: space-around;
-    padding: 0 1em;
-   
-    /* text-transform: s; */
-}
-.alignItems p{
-padding: 0 .5em;
-}
-.foot{
-    text-align: center;
-    display: flex;
-    align-items: flex-end;
-    height: 80%;
-    justify-content: center;
-}
-.textAreaCont{
-    display: flex;
-    justify-content: center;
-    background: rgb(155, 191, 226);
-    height: 100vh;
-    width: 100vw;
-}
-.hove{
-    background: red;
-}
-textarea{
-    resize: none;
-    height: 90%;
-    width: 80%;
-    margin: 3em 0;
-   size-adjust: none;
-   padding: 1em;
-   font-size: 1.1em;
-}
-#pointer{
-    cursor: pointer;
-}
-#colorInput{
-    width: 20px;
-}
-input[type = "color"]{
-    width: 32px;
-    height: 32px;
-    -webkit-appearance: none;
+.change {
+  background: rgb(181, 211, 237);
+  border-radius: 3px;
 }
