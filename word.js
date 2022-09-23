@@ -1,8 +1,5 @@
-
-const sectionDisplay = document.querySelector(".sect2-container")
-const htmlContent =
- 
-   `<div class="pasteCont">
+const sectionDisplay = document.querySelector(".sect2-container");
+const htmlContent = `<div class="pasteCont">
                         <div>
                             <p id="pointer"><i class="fas fa-clipboard " style="font-size: 2em; color: goldenrod;"
                                     id="pointer"></i></p>
@@ -106,10 +103,10 @@ const htmlContent =
                         <p class="foot">Paragraph</p>
                     </div>
 
-`
+`;
 
 let displayOne = htmlContent;
-sectionDisplay.innerHTML = displayOne
+sectionDisplay.innerHTML = displayOne;
 
 let textArea = document.getElementById("write-area");
 let bold = document.querySelector(".bod");
@@ -232,6 +229,7 @@ openBtn.addEventListener("click", () => {
     textArea.style.textAlign = s.textAlign;
     textArea.style.color = s.color;
     textArea.style.background = s.background;
+    localStorage.setItem(namePromt, JSON.stringify(formatArr))
   }
 });
 recentFiles.innerHTML = "";
@@ -242,7 +240,7 @@ for (let index = 0; index < localStorage.length; index++) {
   ptag.textContent = element;
   recentFiles.appendChild(ptag);
 }
-document.querySelector(".copy").addEventListener("click", ()=>{
-  let textVal = textArea.value
-  navigator.clipboard.writeText(textVal)
-})
+document.querySelector(".copy").addEventListener("click", () => {
+  let textVal = textArea.value;
+  navigator.clipboard.writeText(textVal);
+});
