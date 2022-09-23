@@ -11,7 +11,7 @@ const htmlContent =
                         <div>
                             <p id="pointer"> <span><i class="fas fa-cut" style="color: rgb(189, 224, 237);"></i></span>
                                 cut</p>
-                            <p id="pointer"><span><i class="far fa-copy" style="color: rgb(189, 224, 237);"></i></span>
+                            <p id="pointer" class = "copy"><span><i class="far fa-copy" style="color: rgb(189, 224, 237);"></i></span>
                                 copy</p>
                         </div>
                     </div>
@@ -242,3 +242,7 @@ for (let index = 0; index < localStorage.length; index++) {
   ptag.textContent = element;
   recentFiles.appendChild(ptag);
 }
+document.querySelector(".copy").addEventListener("click", ()=>{
+  let textVal = textArea.value
+  navigator.clipboard.writeText(textVal)
+})
